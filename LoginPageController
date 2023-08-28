@@ -1,0 +1,55 @@
+package com.example.mall;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class HelloController {
+
+    @FXML
+    private TextField usernameField;
+
+    @FXML
+    private PasswordField passwordField;
+
+    @FXML
+    private Label errorLabel;
+
+    @FXML
+    private void exit(ActionEvent event) {
+        System.exit(0);
+    }
+
+    @FXML
+    private void login(ActionEvent event) {
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+
+        // Your static username-password pairs
+        String customerUsername = "customer";
+        String customerPassword = "customer123";
+        String staffUsername = "staff";
+        String staffPassword = "staff123";
+        String ceoUsername = "ceo";
+        String ceoPassword = "ceo123";
+
+        if (username.equals(customerUsername) && password.equals(customerPassword)) {
+            errorLabel.setText(""); // Clear error message
+            // TODO: Handle customer login
+        } else if (username.equals(staffUsername) && password.equals(staffPassword)) {
+            errorLabel.setText(""); // Clear error message
+            // TODO: Handle staff login
+        } else if (username.equals(ceoUsername) && password.equals(ceoPassword)) {
+            errorLabel.setText(""); // Clear error message
+            // TODO: Handle CEO login
+        } else {
+            errorLabel.setVisible(true);
+
+        }
+    }
+}
