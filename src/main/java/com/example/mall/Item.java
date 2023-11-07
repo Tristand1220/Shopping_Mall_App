@@ -52,7 +52,7 @@ public class Item {
                 this.itemname = itemname;
         }
 
-        // Method to remove the item
+        // Method to add the item
         public boolean addToCart(List<Item> cart) {
                 if (isInStock) {
                         cart.add(this);
@@ -64,6 +64,10 @@ public class Item {
         // Function to remove the item from a shopping cart or wishlist
         public void removeFromCart(List<Item> cart) {
                 cart.remove(this);
+        }
+        //Method to Like the Item
+        public void likeitem(List<Item> cart) {
+                cart.like(this);
         }
 }
 
