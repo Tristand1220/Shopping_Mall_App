@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.mall.HelloController">
+    <left>
+        <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #6D5090;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" layoutX="92.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Shopping Mall">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="200.0" prefWidth="415.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField layoutX="101.0" layoutY="208.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                <PasswordField layoutX="102.0" layoutY="261.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                <Button layoutX="129.0" layoutY="335.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #6D5090;" text="Login" textFill="WHITE" />
+                <Text fill="#6d5090" layoutX="125.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Text>
+                <Button layoutX="332.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="24.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <Text fill="#6d5090" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                    </graphic>
+                </Button>
+                <Label fx:id="errorLabel" layoutX="106.0" layoutY="402.0" text="Incorrect Login. Try Again" textFill="#ff4d4d" visible="false" />
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
